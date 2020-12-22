@@ -1,0 +1,70 @@
+@import '../variables.scss';
+
+#main-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#terrain-wrapper {
+  flex-grow: 1;
+  overflow: auto;
+  cursor: grab;
+  &.grabbing {
+    cursor: grabbing;
+  }
+  &.hide-grid {
+    #terrain-frame {
+      >div {
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+#terrain-frame {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(42 * 200px);
+  background: url('../assets/mars-terrain.jpg') repeat;
+  position: relative;
+  >div{
+    border: 1px dashed rgb(255, 158, 68);
+    width: 40px;
+    height: 40px;
+  }
+}
+
+#welcome-wrapper {
+  background: rgba( #000, .9);
+  backdrop-filter: blur(30px);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  background: $mainBackgroundColor;
+  display: flex;
+  padding: 10px;
+  app-control-panel, app-welcome-modal {
+    display: block;
+    flex-grow: 1;
+  }
+}
+
+#reset {
+  min-width: 0;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 10px 20px rgba($mainBackgroundColor, 0.5);
+}

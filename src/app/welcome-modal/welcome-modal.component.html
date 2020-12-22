@@ -1,0 +1,37 @@
+<div class="card" [ngClass]="{'embeded': embeded}">
+  <header>
+    <h2>
+      <ng-container *ngIf="!embeded; else embededTitle">
+        Welcome to project ROVER.T0
+      </ng-container>
+      <ng-template #embededTitle>
+        Restart mission
+      </ng-template>
+    </h2>
+  </header>
+  <article>
+    <div>
+      <p>Set rover landing coordinates:</p>
+      <div id="coordinates">
+        <label for="x">x</label>
+        <input type="number" name="x" max="199" min="0" [(ngModel)]="initialData.x" (change)="checkNumber()">
+        <label for="y">y</label>
+        <input type="number" name="y" max="199" min="0" [(ngModel)]="initialData.y" (change)="checkNumber()">
+      </div>
+    </div>
+    <div>
+      <p>And choose planet obstacle density:</p>
+      <div>
+        <mat-slider min="1" max="100" step="1" value="1" thumbLabel [(ngModel)]="initialData.obstacleDensity"></mat-slider>
+        <button type="button" class="primary" (click)="startMission()">
+          <ng-container *ngIf="(loadingMission | async) === false; else loadingMissionMsg">
+            <ng-container *ngIf="embeded">Re</ng-container>Start Mission
+          </ng-container>
+          <ng-template #loadingMissionMsg>
+            Loading mission...
+          </ng-template>
+        </button>
+      </div>
+    </div>
+  </article>
+</div>

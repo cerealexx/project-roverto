@@ -1,0 +1,91 @@
+@import '../../variables.scss';
+
+.card {
+  position: absolute;
+  width: 320px;
+  top: calc(50% - 200px);
+  left: calc(50% - 150px);
+  border: 10px solid $mainBackgroundColor;
+  opacity: 0;
+  animation: showFromBottom 1s forwards;
+  &.embeded {
+    position: static;
+    border: 0;
+    animation: none;
+    opacity: 1;
+    width: auto;
+    p {
+      margin-top: 5px;
+    }
+    article {
+      display: flex;
+      flex-wrap: wrap;
+      >div {
+        &:first-child {
+          margin-right: 10px;
+        }
+        &:last-child {
+          flex-grow: 1;
+          >div {
+            display: flex;
+            align-items: flex-end;
+          }
+        }
+      }
+    }
+    input {
+      height: 35px;
+      font-size: 20px;
+      width: 50px;
+    }
+    mat-slider {
+      margin: 0 10px 0 0;
+    }
+    button {
+      width: auto;
+      background: $secondaryButtonColor;
+      height: 30px;
+      &:hover {
+        background: $secondaryButtonColorHover;
+      }
+    }
+  }
+}
+
+label, p {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: .6;
+  margin: 0;
+}
+
+p {
+  margin: 25px 0 15px;
+  width: 100%;
+}
+
+#coordinates {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  label {
+    margin-right: 10px;
+  }
+  input {
+    width: 100px;
+    flex-grow: 1;
+  }
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  min-width: 200px;
+  flex-shrink: 0;
+}
+
+mat-slider {
+  width: 100%;
+  margin-bottom: 25px;
+}

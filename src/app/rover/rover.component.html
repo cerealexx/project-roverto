@@ -1,0 +1,8 @@
+<img 
+  src="../assets/rover.png" 
+  [ngStyle]="{
+    'transform': 'translate('+ x +'px,'+ y +'px) rotate(' + rotation + 'deg)',
+    'top.px': initialPosition.y,
+    'left.px': initialPosition.x
+  }" 
+  [ngClass]="{'idle': idle}">

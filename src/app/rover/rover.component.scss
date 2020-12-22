@@ -1,0 +1,9 @@
+img {
+  position: absolute;
+  transition: transform .5s;
+  transform-origin: 50%;
+  &.idle {
+    background: rgba(#0eff1a, .2);
+    animation: glowGreen 1s ease-in-out infinite alternate;
+  }
+}

@@ -1,0 +1,39 @@
+@import '../../variables.scss';
+
+.card {
+  margin-left: 10px;
+  width: 200px;
+  >div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0 32px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  p {
+    font-size: 14px;
+    opacity: .6;
+    margin: 0;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+#phone-controls {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  button {
+    min-width: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0px 10px 20px rgba($mainBackgroundColor, 0.5);
+    padding: 0;
+    outline: 0!important;
+  }
+}
