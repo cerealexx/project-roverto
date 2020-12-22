@@ -1,7 +1,7 @@
 ![alt text](https://project-roverto.web.app/landing.jpg). 
   
 Meet ROVER.T0, the latest rover to land in Mars! Its cutting edge technology will prevent any crash when a pitty human sends incorrect commands from Earth.  
-You can try it at https://http://project-roverto.web.app/. 
+You can try it at https://project-roverto.web.app/. 
 Project ROVER.T0 can be installed as a PWA in any device!
   
 Or you can clone the project and serve it locally:
