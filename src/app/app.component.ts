@@ -82,9 +82,7 @@ export class AppComponent implements OnInit {
 
   private _initTerrain(): void {
     // Terrain grid init
-    for (let i = 0; i < 40000; i++) {
-      this._tiles.push(i);
-    }
+    this._tiles = Array(40000);
   }
 
   private _populateObstacles(): void {
